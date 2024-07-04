@@ -36,6 +36,21 @@
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': { 'min': '320px', 'max': '480px' },
+                    // => @media (min-width: 640px and max-width: 767px) { ... }
+
+                    'md': { 'min': '481px', 'max': '1024px' },
+                    // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+                    'lg': { 'min': '1025px'},
+                },
+            }
+        }
+    </script>
 </head>
 
 <body class="h-full w-full">
@@ -43,7 +58,8 @@
 
         <section class="h-full relative z-[99] w-full  bg-[url('/cdn/page1.png')] bg-no-repeat bg-cover bg-center">
             <nav class="w-full bg-transparent h-[5vw] p-[2vw] ">
-                <div class="flex justify-between px-[2.5vw] py-[1.5vw] rounded-[1vw] items-center backdrop-blur-[30px] shadow-[0px_0px_30px_rgba(227,228,237,0.37)] border-[1.5px] border-[rgba(255,255,255,0.18)]">
+                <div
+                    class="flex justify-between px-[2.5vw] py-[1.5vw] rounded-[1vw] items-center backdrop-blur-[30px] shadow-[0px_0px_30px_rgba(227,228,237,0.37)] border-[1.5px] border-[rgba(255,255,255,0.18)]">
                     <div class="flex items-center text-white gap-[2vw]">
                         <img src="/cdn/logo.png" alt="">
                         <h3 class="pt-[0.5vw] font-[700] text-[1.4vw]">Guitars</h3>
