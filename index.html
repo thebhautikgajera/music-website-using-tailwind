@@ -18,6 +18,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
         * {
             margin: 0;
@@ -46,7 +47,7 @@
                     'md': { 'min': '481px', 'max': '1024px' },
                     // => @media (min-width: 768px and max-width: 1023px) { ... }
 
-                    'lg': { 'min': '1025px'},
+                    'lg': { 'min': '1025px' },
                 },
             }
         }
@@ -56,7 +57,9 @@
 <body class="h-full w-full">
     <main class=" relative h-full w-full">
 
-        <section class="h-full relative z-[99] w-full  bg-[url('/cdn/page1.png')] bg-no-repeat bg-cover bg-center">
+        <!-- page-1 desktop screen -->
+        <section
+            class="h-full relative z-[99] w-full  bg-[url('/cdn/page1.png')] bg-no-repeat bg-cover bg-center sm:hidden md:hidden ">
             <nav class="w-full bg-transparent h-[5vw] p-[2vw] ">
                 <div
                     class="flex justify-between px-[2.5vw] py-[1.5vw] rounded-[1vw] items-center backdrop-blur-[30px] shadow-[0px_0px_30px_rgba(227,228,237,0.37)] border-[1.5px] border-[rgba(255,255,255,0.18)]">
@@ -79,15 +82,38 @@
             </div>
         </section>
 
+        <!-- page-1 mobile screen -->
+        <section
+            class="w-full h-auto relative z-[99] bg-[url('/cdn/mob-bg.png')] bg-no-repeat bg-center bg-cover text-center md:hidden lg:hidden">
+            <nav class="px-[7vw] py-[6vw]">
+                <div class="flex justify-between items-center px-[4vw] py-[5vw] rounded-[4vw] text-white backdrop-blur-[30px] shadow-[0px_0px_30px_rgba(227,228,237,0.37)] border-[1.5px] border-[rgba(255,255,255,0.18)]">
+                    <img src="/cdn/mob-logo.png" alt="" height="auto" width="50%">
+                <i class="ri-menu-line text-2xl"></i>
+                </div>
+            </nav>
+            <h1 class="text-4xl text-white font-bold pb-[60vw] pt-[18vw]">Fullfilling <br>dreams with <br>strings
+                attached</h1>
+            <div
+                class="absolute z-[100] bg-[url('/cdn/mob-part.png')] bg-center bg-cover bg-mo-repeat h-auto w-[90%] text-center text-white top-[84%] left-[5%] rounded-xl md:hidden lg:hidden">
+                <h1 class="text-2xl font-bold pt-[4vw] ">FREE GUITAR <br> LESSONS!</h1>
+                <p class="text-xs font-semibold pt-[2vw]">Purchase any guitar over $499.99 and receive <br>a one-hour
+                    guitar lesson free.</p>
+                <button
+                    class="uppercase bg-orange-500 px-[4vw] py-[1.8vw] my-[4vw] text-[3vw] font-semibold rounded-3xl">learn
+                    more</button>
+            </div>
+        </section>
+
+        <!-- mid desktop screen -->
         <div
-            class="absolute z-[100] w-[100%] rounded-[1vw] text-white top-[80%] bg-[url('/cdn/Mobile.png')] bg-no-repeat bg-fit bg-center p-[2vw] text-center">
+            class="absolute z-[100] w-[100%] rounded-[3vw] text-white top-[80%] bg-[url('/cdn/Mobile.png')] bg-no-repeat bg-fit bg-center p-[2vw] text-center sm:hidden md:hidden">
             <h1 class="text-[3vw] font-[700]">FREE GUITAR LESSONS!</h1>
             <h2 class="text-[1.2vw] font-[700]">Purchase any guitar over $499.99 and receive <br> one-hour guitar lesson
                 free. </h2>
             <button class="bg-[#FF753A] text-white px-[2vw] rounded-[3vw] py-[1vw] mt-[1vw]">Learn More</button>
         </div>
 
-        <section class="mt-[12vw] h-[42vw] w-full">
+        <section class="mt-[12vw] h-[42vw] w-full sm:hidden md:hidden">
             <div class="flex justify-center">
                 <div class="h-[3px] w-[5vw] bg-red-500 "></div>
             </div>
@@ -147,7 +173,7 @@
             </div>
         </section>
 
-        <section class="h-[47vw] w-full  bg-[#ECECEC]">
+        <section class="h-[47vw] w-full  bg-[#ECECEC] sm:hidden md:hidden">
             <div class="flex justify-center ">
                 <div class="h-[3px] mt-[5vw] w-[5vw] bg-red-500 "></div>
             </div>
@@ -207,7 +233,7 @@
             </div>
         </section>
 
-        <section class="h-[80vw] w-full">
+        <section class="h-[80vw] w-full sm:hidden md:hidden">
             <div class="flex justify-center ">
                 <div class="h-[3px] mt-[5vw] w-[5vw] bg-red-500 "></div>
             </div>
@@ -258,7 +284,7 @@
             </div>
         </section>
 
-        <footer class="h-[22vw] w-full mt-[15vw] bg-[#505050]">
+        <footer class="h-[22vw] w-full mt-[15vw] bg-[#505050] sm:hidden md:hidden">
             <div class="flex justify-between">
                 <div class="flex">
                     <div class="pt-[5vw]">
@@ -298,7 +324,7 @@
             </div>
         </footer>
 
-        <div class="bg-[#252525] h-[7vh] w-full pl-[7vw] text-white flex items-center text-[1.2vw]">
+        <div class="bg-[#252525] h-[7vh] w-full pl-[7vw] text-white flex items-center text-[1.2vw] sm:hidden md:hidden">
             <p>© 2024 Music Store X <span class="font-['Playwrite_GB_S',_cursive]">The Bhautik Gajera</span></p>
         </div>
     </main>
